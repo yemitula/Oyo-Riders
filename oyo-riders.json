@@ -1,0 +1,51 @@
+{
+    "riders": [{
+            "name": "Yemi Akinyinka",
+            "phone": "08023504762",
+            "address": "74, Oba Overamwen Street, Gwarinpa Estate, Abuja",
+            "bvn": "0123456789",
+            "nin": "1234567890",
+            "riderPhoto": "akinyinka.jpg",
+            "regno": "OYSG 001",
+            "brand": "Bajaj",
+            "cyclePhoto": "bajaj.jpg",
+            "nextdue": "2020-12-30"
+        },
+        {
+            "name": "Yemi Adetula",
+            "phone": "08055811697",
+            "address": "27, Dipo Abe Street, Ojodu, Lagos",
+            "bvn": "1234567890",
+            "nin": "2345678901",
+            "riderPhoto": "tula.jpg",
+            "regno": "OYSG 002",
+            "brand": "Suzuki",
+            "cyclePhoto": "suzuki.jpg",
+            "nextdue": "2020-05-19"
+        },
+        {
+            "name": "Deji Ogunbadejo",
+            "phone": "08057898632",
+            "address": "17, Akinsanya Street, Ojodu, Lagos",
+            "bvn": "2345678901",
+            "nin": "3456789012",
+            "riderPhoto": "deji.jpg",
+            "regno": "OYSG 003",
+            "brand": "Honda",
+            "cyclePhoto": "honda.jpg",
+            "nextdue": "2020-02-02"
+        },
+        {
+            "name": "Ruth Chisom",
+            "phone": "08100591807",
+            "address": "413b, Omofade Crescent, Omole Phase 1, Ojodu, Lagos",
+            "bvn": "3456789012",
+            "nin": "4567890123",
+            "riderPhoto": "ruth.jpg",
+            "regno": "OYSG 004",
+            "brand": "Kawasaki",
+            "cyclePhoto": "kawasaki.jpg",
+            "nextdue": "2020-04-27"
+        }
+    ]
+}
