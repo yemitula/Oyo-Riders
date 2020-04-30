@@ -1,8 +1,10 @@
-var riders = JSON.parse(data);
-var user1_name = riders[0].name;
-var user1_age = riders[0].phone;
-var user2_name = riders[1].name;
-var user2_age = riders[1].phone;
+function riders() {
+    var riders = JSON.parse(oyo_riders);
+    var input = document.getElementsByClassName(input100);
+    var ul = document.getElementsByClassName(list - group);
+    var filter = input100.value.toUppeerCase();
+}
+
 
 
 $(document).ready(function() {
