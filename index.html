@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>OYSGRRP</title>
     <meta charset="UTF-8">
@@ -28,69 +27,112 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
 </head>
-
 <body>
-
     <div class="limiter">
-        <div class="container-search100">
-            <div class="wrap-search100 p-t-85 p-b-20">
-                <form class="search100-form validate-form" action="" method="GET">
-                    <span class="search100-form-title p-b-70">
+        <div class="container container-search100">
+            <div class="p-b-20">
+                <!-- form -->
+                <form id="searchForm" name="searchForm" class="search100-form validate-form">
+                    <!-- title -->
+                    <span class="search100-form-title p-b-20">
 						Welcome
-					</span>
+                    </span>
+                    <!-- logo -->
                     <span class="search100-form-avatar">
 						<img src="images/oyo_rider.jpg" alt="AVATAR">
 					</span>
-
-                    <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter Registration Number">
-                        <input class="input100" type="text" name="Registration Number">
-                        <span class="focus-input100" data-placeholder="Registration Number"></span>
+                    <!-- search box -->
+                    <div class="wrap-input100 validate-input m-t-20 m-b-30" data-validate="Enter Registration Number">
+                        <input class="input100" type="text" id="regnum" name="regnum" placeholder="Registration Number" required>
+                        <span class="focus-input100" ></span>
+                        <!-- data-placeholder="Registration Number" -->
                     </div>
-
+                    <!-- search button -->
                     <div class="container-search100-form-btn">
-                        <button class="search100-form-btn">
+                        <button type="submit" class="search100-form-btn">
 							Search
 						</button>
                     </div>
-
-                    <ul class="list-group" id="result"></ul>
-
-
-                    <!-- <div class="text-wrap ">
-                        <h3 style="text-align: center; margin-top: 1EM;">RESULT</h3>
-                        <div style="border: 1px solid black; min-height: 15em; margin-top: 2em;">
-                            <p class="resized" style="text-align: center; border: 1px solid black;
-                                 margin-top:1em; margin-left: 9em; max-width: 10em; 
-                                 padding:1em; float: none;">
-                                Passport picture of <br> the owner goes <br> here</p>
+                    <!-- result not found -->
+                    <div id="notfound" class="alert alert-danger text-center mt-4 px-5 py-5" role="alert">
+                        <h4 class="alert-heading mb-2">NOT FOUND!</h4>
+                        <p>No result found for the registration number you entered. Please check and try again.</p>
+                      </div>
+                    <!-- result box -->
+                    <div id="result" class="my-4"></div>
+                    <!-- result sample -->
+                    <div class="text-wrap" id="resultsample">
+                        <hr>
+                        <!-- rider details -->
+                        <h3 class=" text-center my-4">RESULT</h3>
+                        <div class="border border-dark px-4 py-4">
+                            <img class="mx-auto d-block" src="https://via.placeholder.com/150">
+                            <table class="table table-bordered table-hover mt-4">
+                                <tbody>
+                                  <tr>
+                                    <td>Motorcycle Reg No</td>
+                                    <td class="font-weight-bold text-success"><strong>OYSG 001</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Brand</td>
+                                    <td class="font-weight-bold text-success"><strong>Bajaj</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Owner</td>
+                                    <td class="font-weight-bold text-success"><strong>Olawale Akinyinka</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Phone</td>
+                                    <td class="font-weight-bold text-success"><strong>08023504762</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Address</td>
+                                    <td class="font-weight-bold text-success"><strong>Olawale Akinyinka</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>BVN</td>
+                                    <td class="font-weight-bold text-success"><strong>0123456789</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>NIN</td>
+                                    <td class="font-weight-bold text-success"><strong>1234567890</strong></td>
+                                  </tr>
+                                </tbody>
+                              </table>
                         </div>
-                        <h3 style="text-align: center; margin-top: 1EM;">SEARCH STATUS</h3>
-                        <div style="border: 1px solid black; min-height: 15em; margin-top: 2em;">
-                            <p>This motorcycle was due for renewal on:</p>
-                            <p class="resized" style="text-align: center; border: 1px solid black;
-                                 margin-top:1em; margin-left: 9em; max-width: 10em; 
-                                 padding:1em;">
-                                30th December<br> 2019
-                        </div>
-                    </div> -->
-
-
-
-                    <ul class="search-more p-t-190">
+                        <!-- valid active registration -->
+                        <div class="alert alert-success text-center mt-4 px-5 py-5" role="alert">
+                            <h4 class="alert-heading mb-2">SEARCH STATUS</h4>
+                            <p>This motor cycle registration is due for renewal on:</p>
+                            <p class="font-weight-bold text-dark lead my-4">30th December, 2020</p>
+                            <hr>
+                            <p>Thank you for updating your documents on schedule.</p>
+                          </div>
+                        <!-- expired registration -->
+                        <div class="alert alert-danger text-center mt-4 px-5 py-5" role="alert">
+                            <h4 class="alert-heading mb-2">SEARCH STATUS</h4>
+                            <p>This motor cycle registration was due for renewal on:</p>
+                            <p class="font-weight-bold text-dark lead my-4">30th December, 2019</p>
+                            <hr>
+                            <p>Kindly update your documents to avoid embarrassment.</p>
+                          </div>
+                    </div>
+                    <!-- footer -->
+                    <footer class="my-5 pt-5 text-muted text-center text-small">
+                        <p class="mb-1"> THE OYO STATE RIDERS REGISTRATION PROJECT &copy; 2020</p>
+                      </footer>
+                    <!-- <ul class="search-more p-t-40">
                         <li class="m-b-12">
                             <span class="txt1">
-								THE OYO STATE RIDERS REGISTRATION PROJECT<a href="www.oysgrrp.ng">OYSGRRP</a>
+								THE OYO STATE RIDERS REGISTRATION PROJECT &copy; 2020
 							</span>
                         </li>
-                    </ul>
+                    </ul> -->
                 </form>
             </div>
         </div>
     </div>
-
-
     <div id="dropDownSelect1"></div>
-
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
@@ -106,8 +148,7 @@
     <!--===============================================================================================-->
     <script src="vendor/countdowntime/countdowntime.js"></script>
     <!--===============================================================================================-->
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="oyo_riders.json"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
